@@ -18,7 +18,7 @@ int w_distance_evals = 0;
 
 // function definitions
 
-// radians to degrees
+// radians
 // converts the argument of the function from degrees to radians
 double radians(double degrees) {
     // work out the value of the function
@@ -27,9 +27,9 @@ double radians(double degrees) {
     return r;
 }
 
-// haversine_formula
+// distance
 // calculates the linear distance (in miles) between two places,
-// given their lattitude and longitudes (in degrees)
+// given their lattitude and longitudes (in degrees) using the Haversine formula
 double distance(double long1, double lat1, double long2, double lat2) {
     
     double a, dLat, dLong, c, distance;
@@ -42,7 +42,7 @@ double distance(double long1, double lat1, double long2, double lat2) {
     return distance;
 }
 
-// weighted_distance
+// w_distance
 // scales the distance between two points, by multiplying by a weighting factor
 // that is proportional to the popuation of the place
 double w_distance(double long1, double lat1, double long2, double lat2, double weight) {
